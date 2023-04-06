@@ -1,0 +1,16 @@
+*** Keywords ***
+HowToPassOptionalKeyword
+  [Arguments]    ${Name}    ${College}="ABC"
+  Log to Console    ${Name}
+  Log to Console    ${College}
+  
+ *** Test Cases ***
+ Print Name and College
+  HowToPassOptionalKeyword    Infy    CollegeInfosys,
+  HowToPassOptionalKeyword    Infy
+  
+  Output:
+  Infy
+  CollegeInfosys
+  Infy
+  ABC
